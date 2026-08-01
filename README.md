@@ -9,15 +9,14 @@ Ce dépôt ne contient que la formule d'installation. Le code source vit dans
 ## Installation
 
 ```bash
-brew install --cask Endikk/claudy/claudy
-```
-
-Homebrew ajoute le tap automatiquement à la première installation. Pour le faire à la main :
-
-```bash
 brew tap Endikk/claudy
+brew trust Endikk/claudy
 brew install --cask claudy
 ```
+
+Les trois commandes sont nécessaires. Depuis Homebrew 6, un tap tiers doit être approuvé
+explicitement par `brew trust` : sans ça, Homebrew refuse de charger le cask
+(« Refusing to load cask from untrusted tap »).
 
 ## Mise à jour
 
